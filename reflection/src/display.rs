@@ -1,17 +1,13 @@
-use uefi::proto::console::gop::{BltOp, BltPixel, BltRegion, GraphicsOutput};
+use uefi::proto::console::gop::{GraphicsOutput};
 use crate::Display;
 use uefi::{Error, Result};
 use embedded_graphics::prelude::*;
 use embedded_graphics::image::Image;
-use embedded_graphics::pixelcolor::{Bgr555, Bgr565, Bgr666, Bgr888, Rgb555, Rgb565, Rgb666, Rgb888};
 use tinybmp::Bmp;
-use alloc::vec;
 use embedded_graphics::mono_font::ascii::{FONT_7X13, FONT_7X13_BOLD};
 use embedded_graphics::mono_font::MonoTextStyle;
 use embedded_graphics::text::Text;
 use uefi::table::boot::ScopedProtocol;
-use uefi_services::println;
-use crate::colors::{BasicPixelColor};
 use crate::framebuffer::Framebuffer;
 use crate::PixelColor;
 

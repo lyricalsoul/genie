@@ -2,9 +2,9 @@
 #![no_std]
 extern crate alloc;
 
-use alloc::vec::Vec;
-use uefi::proto::console::gop::{BltPixel, GraphicsOutput};
-use uefi::table::boot::ScopedProtocol;
+
+
+
 use crate::colors::BasicPixelColor;
 use crate::framebuffer::Framebuffer;
 
